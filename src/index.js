@@ -3,10 +3,10 @@ const mongoose = require("mongoose");
 //const multer = require('multer');
 const app = express();
 const route = require("./route/route");
-
+const cors = require('cors')
 app.use(express.json());
 //app.use(multer().any());
-
+app.use(cors())
 mongoose.set("strictQuery", true);
 mongoose
     .connect(
